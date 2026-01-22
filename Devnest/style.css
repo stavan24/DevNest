@@ -438,6 +438,8 @@ body.light .code-box {
 }
 
 .about h1 {
+        margin-top: 70px;
+
     color: #00d4ff;
     margin-bottom: 2rem;
 }
@@ -737,4 +739,5 @@ body.light .save-btn.saved {
 body.light .unsave-btn {
     background-color: #ff6b7a;
     color: #333;
+
 }
