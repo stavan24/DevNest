@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevNest - Saved Templates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">DevNest</div>
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="templates.html">📋 Templates</a></li>
+                <li><a href="saved.html">💾 Saved</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="profile.html">👤 Profile</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <label for="theme-switch">🌙</label>
+                <input type="checkbox" id="theme-switch">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <main class="saved">
+        <section class="search-section">
+            <input type="text" id="search-bar" placeholder="Search saved templates by name or tag..." oninput="filterSavedTemplates()">
+        </section>
+        <section class="grid" id="saved-grid">
+            <!-- Saved templates will be dynamically inserted here -->
+        </section>
+        <div id="template-viewer" class="viewer-modal hidden">
+            <div class="viewer-content">
+                <button class="close-btn" onclick="closeViewer()">✕</button>
+                <h2 id="viewer-title"></h2>
+                <div class="folder-structure">
+                    <h3>📁 Project Structure</h3>
+                    <ul id="structure-list"></ul>
+                </div>
+                <div class="code-preview">
+                    <div class="tabs">
+                        <button class="tab active" onclick="showTab('server')">server.js</button>
+                        <button class="tab" onclick="showTab('routes')">routes.js</button>
+                        <button class="tab" onclick="showTab('controller')">controller.js</button>
+                    </div>
+                    <pre id="code-display" class="code-box"></pre>
+                    <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                </div>
+                <p id="explanation"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="saved.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

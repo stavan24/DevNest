@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevNest - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">DevNest</div>
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="templates.html">📋 Templates</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="profile.html">👤 Profile</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <label for="theme-switch">🌙</label>
+                <input type="checkbox" id="theme-switch">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <main class="home">
+        <section class="hero">
+            <h1 class="gradient-text">Build backend faster. Learn it better.</h1>
+            <p class="subtitle">DevNest provides beginner-friendly backend boilerplate templates for Node.js, Express, and APIs. Understand backend structure visually and build with confidence.</p>
+            <div class="cta-buttons">
+                <a href="templates.html" class="btn primary">Explore Templates</a>
+                <a href="profile.html" class="btn secondary">View Profile</a>
+            </div>
+        </section>
+        <section class="features">
+            <div class="card" data-hover="Node.js basics">
+                <h3>Node.js</h3>
+                <p>Master server-side JavaScript with our Node.js templates.</p>
+            </div>
+            <div class="card" data-hover="Express routing">
+                <h3>Express</h3>
+                <p>Build robust APIs with Express.js frameworks.</p>
+            </div>
+            <div class="card" data-hover="RESTful endpoints">
+                <h3>REST API</h3>
+                <p>Create scalable REST APIs effortlessly.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+</html>

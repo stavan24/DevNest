@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevNest - Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">DevNest</div>
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="templates.html">📋 Templates</a></li>
+                <li><a href="saved.html">� Saved</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="profile.html">👤 Profile</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <label for="theme-switch">🌙</label>
+                <input type="checkbox" id="theme-switch">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <main class="profile">
+        <div class="profile-header">
+            <div class="avatar">👨‍💻</div>
+            <h1 id="username">DevUser</h1>
+            <button class="btn primary" onclick="openEditModal()">Edit Profile</button>
+        </div>
+        <div class="profile-content">
+            <section class="bio">
+                <h2>Bio</h2>
+                <p id="bio">Passionate developer learning backend with DevNest.</p>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <div id="skills-tags"></div>
+            </section>
+            <section class="saved-templates">
+                <h2>Saved Templates</h2>
+                <ul id="saved-list"></ul>
+            </section>
+            <section class="favorites">
+                <h2>Favorite Templates</h2>
+                <ul id="favorites-list"></ul>
+            </section>
+        </div>
+        <div id="edit-modal" class="modal hidden">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeEditModal()">✕</button>
+                <h2>Edit Profile</h2>
+                <label>Username: <input type="text" id="edit-username"></label>
+                <label>Bio: <textarea id="edit-bio"></textarea></label>
+                <label>Skills (comma-separated): <input type="text" id="edit-skills"></label>
+                <button class="btn primary" onclick="saveProfile()">Save</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="profile.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
